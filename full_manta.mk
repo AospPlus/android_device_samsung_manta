@@ -33,13 +33,15 @@ PRODUCT_PROPERTY_OVERRIDES := \
         net.dns1=8.8.8.8 \
         net.dns2=8.8.4.4
 
+#inherit some common AX stuff.
+$(call inherit-product, vendor/ax/config/common_full_tablet_wifionly.mk)
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, device/samsung/manta/device.mk)
 
-PRODUCT_NAME := full_manta
+PRODUCT_NAME := ax_manta
 PRODUCT_DEVICE := manta
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on Manta
+PRODUCT_MODEL := AOSP+ on Manta
 PRODUCT_MANUFACTURER := Samsung
-PRODUCT_RESTRICT_VENDOR_FILES := owner path

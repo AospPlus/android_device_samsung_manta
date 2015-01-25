@@ -15,4 +15,4 @@
 #
 $(call inherit-product, device/samsung/manta/full_manta.mk)
 
-PRODUCT_NAME := aosp_manta
+PRODUCT_NAME := ax_manta
